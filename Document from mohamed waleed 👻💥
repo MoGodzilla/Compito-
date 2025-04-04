@@ -1,0 +1,104 @@
+/*    A
+#include <iostream>
+using namespace std;
+int main() {
+    double num;
+    double min;
+    for (int i = 0; i < 3; ++i) {
+    cin >> num;
+    if (i == 0) {
+        min = num;
+        }
+    else if (num < min) {
+        min = num;
+        }
+    }
+    cout << "The minimum is " << min << endl;
+}
+*/
+
+/*    B
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        int a;
+        int b;
+        int c;
+        cin >> a;
+        cin >> b;
+        cin >> c;
+        if (a + b + c >= 2) {
+            count++;
+        }
+    }
+    cout << count << endl;
+}
+*/
+
+/*    C
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    unordered_map<string, int> title_count;
+    for (int i = 0; i < n;i++) {
+        string title;
+        cin >> title;
+        if (title_count.find(title) == title_count.end()) {
+            cout<<"OK"<< endl;
+            title_count[title] = 1;
+        }
+        else {
+            cout << title << title_count[title] << endl;
+            title_count[title]++;
+        }
+    }
+}
+*/
+
+/*    D
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    int temperature = 0;
+    for (int i = 0; i < n; ++i) {
+        string command;
+        cin >> command;
+        if (command == "T++") {
+            temperature++;
+        }
+        else if (command == "T--") {
+            temperature--;
+        }
+    }
+    cout << temperature << endl;
+}
+*/
+
+/*     E
+#include <iostream>
+using namespace std;
+int main() {
+    string num;
+    cin >> num;
+    for (int i = 0; i < num.length(); ++i) {
+        int d = num[i] - '0';
+        int change = 9 - d;
+        if (change < d) {
+            if (i == 0 && change == 0) {
+                continue;
+            }
+            num[i] = '0' + change;
+        }
+    }
+    cout << num << endl;
+}
+*/
